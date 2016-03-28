@@ -5,7 +5,7 @@
  
  function respond() {
    var request = JSON.parse(this.req.chunks[0]),
-        botRegex = /^\/cool guy/;  botRegexDL = /^\/DDL/i;botRegexSalt = /^\/salt/;botRegexRules = /^\/rules/
+        botRegex = /^\sex/;  botRegexDL = /^\/DDL/i;botRegexSalt = /^\/salt/;botRegexRules = /^\/rules/
         botRegexAd=/^\/advance/;botRegexGTA = /^\/gta/; botRegexSC = /^\/SDL/i; botODB = /(.*\s+)(.*odb)(\s+.*)/i; botDuck = /^\/duck/;
         botRegexP = /^\/PDL/i;  botRegexTw = /^\/twitch/i; botRegexSb = /^\/sub/; botRegexSh = /^\/shrug/; botRegexWk = /^\/users/; botRegexCC = /^\/cc/;
  -      botRegexSiege = /^\/siege/; //botEyes = /👀/ ;//
@@ -17,7 +17,7 @@
                  "MIA","BUF","SF","WAS","NYJ","TB"]
    if(request.text && botRegex.test(request.text)) {
      this.res.writeHead(200);
-     postMessage(cool());
+     postMessage(i also love sex);
      this.res.end();
    } 
    else if(request.text && botRegexDL.test(request.text)) {
