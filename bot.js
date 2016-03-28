@@ -16,20 +16,10 @@ function respond() {
                 "MIA","BUF","SF","WAS","NYJ","TB"]
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("hi");
+    postMessage("o");
     this.res.end();
   } 
-  else if(request.text && botRegexHi.test(request.text)) {
-    this.res.writeHead(200);
-    postMessage("hey");
-    this.res.end();
-  }
-   else if(request.text && botRegexHello.test(request.text)) {
-    this.res.writeHead(200);
-    postMessage("hi");
-    this.res.end();
-   }
-   
+
    
   else {
     console.log("don't care");
