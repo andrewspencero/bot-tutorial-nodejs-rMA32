@@ -21,7 +21,7 @@ function respond() {
   } 
   else if(request.text && botRegexHi.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("hello");
+    postMessage("hey");
     this.res.end();
   }
    else if(request.text && botRegexHello.test(request.text)) {
