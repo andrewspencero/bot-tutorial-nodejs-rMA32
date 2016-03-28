@@ -17,7 +17,7 @@
                  "MIA","BUF","SF","WAS","NYJ","TB"]
    if(request.text && botRegex.test(request.text)) {
      this.res.writeHead(200);
-     postMessage(i also love sex);
+     postMessage("i also love sex");
      this.res.end();
    } 
    else if(request.text && botRegexDL.test(request.text)) {
