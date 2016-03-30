@@ -5,7 +5,7 @@ var botID = process.env.BOT_ID;
 
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
-      botRegex = /^\Gort 2.0 status/;  botRegexDL = /^\gort 2.0 status/i;botRegexSalt = /^\gort 2 status/;botRegexRules = /^\/rules/
+      botRegex = /^\Gort 2.0 status/;  botRegexDL = /^\gort 2.0 status/i;botRegexSalt = /^\gort 2 status/;botRegexRules = /^\gort status/
       botRegexAd=/^\/advance/;botRegexGTA = /^\/gta/; botRegexSC = /^\/SDL/i; botODB = /(.*\s+)(.*odb)(\s+.*)/i; botDuck = /^\/duck/;
       botRegexP = /^\/PDL/i;  botRegexTw = /^\/twitch/i; botRegexSb = /^\/sub/; botRegexSh = /^\/shrug/; botRegexWk = /^\/users/; botRegexCC = /^\/cc/;
       botRegexSiege = /^\/siege/
@@ -31,7 +31,7 @@ function respond() {
   } 
   else if(request.text && botRegexAd.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://www.hackcollege.com/wp-content/uploads/2013/02/kno_advance.jpg");
+    postMessage("wtf wake up @gort");
     this.res.end();
   }
   else if(request.text && botRegexRules.test(request.text)) {
