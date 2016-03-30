@@ -5,9 +5,9 @@ var botID = process.env.BOT_ID;
 
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
-      botRegex = /^\Gort 2.0 status/;  botRegexDL = /^\gort 2.0 status/i;botRegexSalt = /^\gort 2 status/;botRegexRules = /^\gort status/
-      botRegexAd=/^\/advance/;botRegexGTA = /^\/gta/; botRegexSC = /^\/SDL/i; botODB = /(.*\s+)(.*odb)(\s+.*)/i; botDuck = /^\/duck/;
-      botRegexP = /^\/PDL/i;  botRegexTw = /^\/twitch/i; botRegexSb = /^\/sub/; botRegexSh = /^\/shrug/; botRegexWk = /^\/users/; botRegexCC = /^\/cc/;
+      botRegex = /^\Gort 2.0 status/;  botRegexDL = /^\gort 2.0 status/i;botRegexSalt = /^\gort 2 status/;botRegexRules = /^\Gort status/
+      botRegexAd=/^\gort status/;botRegexGTA = /^\gort 2.0 sec 1/; botRegexSC = /^\Gort 2.0 sec 1/i; botODB = /(.*\s+)(.*odb)(\s+.*)/i; botDuck = /^\gort 2.0 sec 2/;
+      botRegexP = /^\Gort 2.0 sec 2/i;  botRegexTw = /^\gort 2.0 sec 3/i; botRegexSb = /^\Gort 2.0 sec 3/; botRegexSh = /^\/shrug/; botRegexWk = /^\/users/; botRegexCC = /^\/cc/;
       botRegexSiege = /^\/siege/
       siege1 = 'https://i.groupme.com/350x419.png.adc8c73a6c1547e0a9e04320296329f8'; siege2 = 'https://i.groupme.com/1279x752.jpeg.aa5d0401e0df495bba4b4e09dc5a6bd7'
       siege3 = 'https://i.groupme.com/960x960.png.006e180e05d841c6a2962e844bf1e6fd';
@@ -36,35 +36,33 @@ function respond() {
   }
   else if(request.text && botRegexRules.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("https://docs.google.com/document/d/1hSuEG7oplnx4IX6HGsMOjsWb9TCqC4-F1NLjuBz5PCM/edit");
+    postMessage("pls wake up @gort");
     this.res.end();
   } 
   else if(request.text && botRegexGTA.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("https://i.groupme.com/220x147.jpeg.a2dd2add32b14fff9e329535186d793c.large");
+    postMessage("i cant do that, im just a friendly robot");
     this.res.end();
   } 
   else if(request.text && botRegexSC.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://daddyleagues.com/SRMFL/team/"+request.text.substring(5,8)+"/schedule");
+    postMessage("i cant do that for you, sorry :(");
     this.res.end();
   }
   else if(request.text && botRegexP.test(request.text)) {
     this.res.writeHead(200);
-    var req = request.text.substring(5,request.text.length);
-    var rep = req.replace(/ /,"+");
-    postMessage("http://daddyleagues.com/SRMFL/players?name="+rep+"&position=all&team=all");
+    postMessage("only @gort can do that!");
     this.res.end();
   }  
 
   else if(request.text && botRegexTw.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://www.twitch.tv/"+request.text.substring(8,request.text.length));
+    postMessage("i wish i could do that for you :( sorry!"+);
     this.res.end();
   } 
   else if(request.text && botRegexSb.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://www.reddit.com/r/maddenall32");
+    postMessage(":'( i cant do that!!");
     this.res.end();
   } 
   else if(request.text && botRegexSh.test(request.text)) {
@@ -84,7 +82,7 @@ function respond() {
   } 
   else if(request.text && botDuck.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://media3.giphy.com/media/YCseTHF2I6CCA/giphy.gif");
+    postMessage(":'( i cant do that!");
     this.res.end();
   }
   else if(request.text && botRegexCC.test(request.text)) {
